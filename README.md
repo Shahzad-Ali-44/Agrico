@@ -55,7 +55,6 @@ python main.py
 - **Frontend:** Next.js
 - **Backend:** FastAPI
 - **Model:** Convolutional Neural Network (CNN) with 89% accuracy
-- **Database:** (Specify if applicable)
 
 
 ## 🚀 Usage
