@@ -7,7 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Rice Crop Disease Detection", 
+  title: "AGRICO", 
 };
 
 export default function Home() {
