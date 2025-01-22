@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Error Page ",
-  description: "This is Error Page for",
+  description: "This is Error Page",
 };
 
 const ErrorPage = () => {
