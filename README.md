@@ -56,10 +56,10 @@ To enable the contact form functionality, follow these steps:
 1. **Get an Access Key**:
    - Visit [Web3Forms](https://web3forms.com/) and sign up to get your free access key.
 
-2. **Update the `.env` File**:
-   - Add the following entry to your `.env` file:
+2. **Update the `.env.local` File**:
+   - Add the following entry to your `.env.local` file:
      ```env
-     WEB3FORMS_ACCESS_KEY=your-access-key-here
+     NEXT_PUBLIC_AccessKey=your-access-key-here
      ```
 
 3. **How It Works**:
