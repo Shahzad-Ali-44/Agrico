@@ -49,6 +49,22 @@ To start the backend server:
 ```bash
 python main.py
 ```
+## Contact Form Configuration
+
+To enable the contact form functionality, follow these steps:
+
+1. **Get an Access Key**:
+   - Visit [Web3Forms](https://web3forms.com/) and sign up to get your free access key.
+
+2. **Update the `.env` File**:
+   - Add the following entry to your `.env` file:
+     ```env
+     WEB3FORMS_ACCESS_KEY=your-access-key-here
+     ```
+
+3. **How It Works**:
+   - The contact form uses the Web3Forms API to send messages to the email address you configure in your Web3Forms account.
+   - Ensure your application has internet access to communicate with the Web3Forms API.
 
 ## 🛠 Technology Stack
 
