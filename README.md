@@ -13,6 +13,11 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
 
 ## ⚙️ Installation and Setup
 
+**Clone the Repository**:
+   ```bash
+   git clone https://github.com/Shahzad-Ali-44/Agrico-AI-Powered-App-For-Early-Rice-Crops-Disease-Detection.git
+   ```
+
 ### Frontend (Next.js)
 
 1. Install dependencies:
