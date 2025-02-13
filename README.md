@@ -13,6 +13,11 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
 
 ## ⚙️ Installation and Setup
 
+**Clone the Repository**:
+   ```bash
+   git clone https://github.com/Shahzad-Ali-44/Agrico-AI-Powered-App-For-Early-Rice-Crops-Disease-Detection.git
+   ```
+
 ### Frontend (Next.js)
 
 1. Install dependencies:
@@ -49,6 +54,22 @@ To start the backend server:
 ```bash
 python main.py
 ```
+## Contact Form Configuration
+
+To enable the contact form functionality, follow these steps:
+
+1. **Get an Access Key**:
+   - Visit [Web3Forms](https://web3forms.com/) and sign up to get your free access key.
+
+2. **Update the `.env.local` File**:
+   - Add the following entry to your `.env.local` file:
+     ```env
+     NEXT_PUBLIC_AccessKey=your-access-key-here
+     ```
+
+3. **How It Works**:
+   - The contact form uses the Web3Forms API to send messages to the email address you configure in your Web3Forms account.
+   - Ensure your application has internet access to communicate with the Web3Forms API.
 
 ## 🛠 Technology Stack
 
