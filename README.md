@@ -18,7 +18,7 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
    git clone https://github.com/Shahzad-Ali-44/Agrico-AI-Powered-App-For-Early-Rice-Crops-Disease-Detection.git
    ```
 
-### Frontend (Next.js)
+
 
 1. Install dependencies:
    ```bash
@@ -30,30 +30,7 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
    npm run dev
    ```
 
-### Backend (FastAPI)
 
-#### Required Dependencies
-
-If you have only Python installed, you'll need to install the following libraries:
-
-- `fastapi`
-- `uvicorn`
-- `numpy`
-- `pillow`
-- `tensorflow`
-- `logging`
-
-To install them, run:
-
-```bash
-pip install fastapi uvicorn numpy pillow tensorflow logging
-```
-
-To start the backend server:
-
-```bash
-python main.py
-```
 ## Contact Form Configuration
 
 To enable the contact form functionality, follow these steps:
@@ -74,8 +51,8 @@ To enable the contact form functionality, follow these steps:
 ## 🛠 Technology Stack
 
 - **Frontend:** Next.js
-- **Backend:** FastAPI
-- **Model:** Convolutional Neural Network (CNN) with 89% accuracy
+- **Backend:** FastAPI (Deployed)
+- **Model:** Convolutional Neural Network (CNN) with 89% accuracy (Deployed)
 
 
 ## 🚀 Usage

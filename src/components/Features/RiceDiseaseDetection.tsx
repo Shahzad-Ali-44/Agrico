@@ -31,7 +31,7 @@ const RiceDiseaseDetection: React.FC = () => {
     formData.append("file", image);
 
     try {
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("https://ricemodelbackend-production.up.railway.app/predict", {
         method: "POST",
         body: formData,
       });
@@ -79,17 +79,17 @@ const RiceDiseaseDetection: React.FC = () => {
 
       {error && <p className="text-red-500 mt-6 text-sm">{error}</p>}
       {result && (
-        <div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner w-full text-center border border-gray-200 dark:border-gray-600">
+        <div className="mt-8 p-6 bg-gray-100 dark:bg-gray-800 rounded-lg shadow-inner w-full  border border-gray-200 dark:border-gray-600">
           <p className="text-xl font-semibold text-gray-800 dark:text-gray-100">
             Detected Disease: {result.class}
           </p>
-          <p className="text-md text-gray-600 dark:text-gray-300 mt-2">
+          <p className="text-md font-semibold text-gray-600 dark:text-gray-300 mt-2">
             Confidence: {(result.confidence * 100).toFixed(2)}%
           </p>
-          <p className="text-md text-gray-600 dark:text-gray-300 mt-2">
+          <p className="text-md font-semibold text-gray-600 dark:text-gray-300 mt-2">
             Symptoms: {result.symptoms}
           </p>
-          <p className="text-md text-gray-600 dark:text-gray-300 mt-2">
+          <p className="text-md font-semibold text-gray-600 dark:text-gray-300 mt-2">
             Treatment: {result.treatment}
           </p>
         </div>
