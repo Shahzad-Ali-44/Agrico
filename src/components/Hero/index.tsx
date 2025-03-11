@@ -11,10 +11,10 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] ">
-                <h1 className="my-5 md:mb-5 md:mt-0 text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight text-center">
+                <h1 className="my-5 md:mb-5 md:mt-0 text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight md:text-center">
                 Revolutionize Agriculture with Advanced Rice Crop Disease Detection
                 </h1>
-                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl text-justify">
                 Agrico is a cutting-edge solution for farmers and agricultural businesses, offering AI-powered rice crop disease detection. Ensure healthier crops, higher yields, and sustainable farming practices with our innovative technology.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
