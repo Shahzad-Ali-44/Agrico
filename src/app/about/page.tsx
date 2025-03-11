@@ -4,14 +4,14 @@ import Breadcrumb from "@/components/Common/Breadcrumb";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page",
+  title: "AGRICO - About us",
 };
 
 const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="About Page"
+        pageName="About us"
         description=""
       />
       <AboutSectionOne />

@@ -51,7 +51,7 @@ const RiceDiseaseDetection: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center py-10 px-8 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 rounded-lg shadow-lg dark:shadow-md w-full max-w-2xl mx-auto border border-gray-200 dark:border-gray-700">
-      <h2 className="text-3xl font-semibold mb-6 text-center text-gray-800 dark:text-gray-100">
+      <h2 className="md:text-3xl text-sm font-semibold mb-6 text-center text-gray-800 dark:text-gray-100">
         Rice Crop Disease Detection
       </h2>
       <form onSubmit={handleSubmit} className="w-full space-y-6">

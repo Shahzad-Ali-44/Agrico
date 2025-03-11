@@ -4,7 +4,7 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Page",
+  title: "AGRICO - Contact us",
   description: "This is Contact Page",
 };
 
@@ -12,7 +12,7 @@ const ContactPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Contact Page"
+        pageName="Contact us"
         description=""
       />
 
