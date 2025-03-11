@@ -173,7 +173,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-            © {new Date().getFullYear()} Agrico. All rights reserved. |  Privacy Policy | Terms of Service
+            © {new Date().getFullYear()} Agrico | All Rights Reserved |  Developed by <a className="underline" target="_blank" href="https://www.linkedin.com/in/shahzad-ali-8817632ab/">Shahzad Ali</a>
             </p>
           </div>
         </div>

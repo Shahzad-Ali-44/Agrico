@@ -10,8 +10,8 @@ const Hero = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="my-5 md:mb-5 md:mt-0 text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight">
+              <div className="mx-auto max-w-[800px] ">
+                <h1 className="my-5 md:mb-5 md:mt-0 text-2xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-4xl md:leading-tight text-center">
                 Revolutionize Agriculture with Advanced Rice Crop Disease Detection
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">

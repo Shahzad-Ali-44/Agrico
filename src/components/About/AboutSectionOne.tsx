@@ -22,7 +22,7 @@ const AboutSectionOne = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-4 lg:w-1/2 text-justify">
               <SectionTitle
                 title="Our Mission"
                 paragraph="At Agrico, our mission is to revolutionize the agricultural sector by leveraging advanced technology to enhance crop health and productivity. We aim to provide farmers with innovative tools and resources that promote sustainable farming practices and ensure food security."
@@ -34,10 +34,10 @@ const AboutSectionOne = () => {
                 data-wow-delay=".15s"
               >
                 <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
+                  <div className="w-full px-3 sm:w-1/2 lg:w-full  text-left">
                     <List text="Premium quality" />
                     <List text="Focus on Agriculture" />
-                    <List text="Multi-Crop Support" />
+                    <List text="Rice-Crop Support" />
                     <List text="Advanced Deep Learning Models" />
                     <List text="High Confidence Predictions" />
                     <List text="Contribution to Sustainability" />

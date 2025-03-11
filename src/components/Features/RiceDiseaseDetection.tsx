@@ -57,7 +57,7 @@ const RiceDiseaseDetection: React.FC = () => {
       <form onSubmit={handleSubmit} className="w-full space-y-6">
         <div className="w-full">
           <label htmlFor="image-upload" className="block text-sm font-medium mb-2 text-gray-600 dark:text-gray-300">
-            Upload Image:
+            Upload Image: (only rice leaf)
           </label>
           <input
             type="file"

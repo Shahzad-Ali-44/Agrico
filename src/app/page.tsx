@@ -8,6 +8,17 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "AGRICO", 
+  description:
+  "AGRICO is an AI-powered web application for detecting rice crop diseases. Upload an image and get instant disease diagnosis with high accuracy.",
+keywords: [
+  "Agrico",
+  "AGR",
+  "Rice Disease Detection",
+  "AI Agriculture",
+  "Crop Health",
+  "Deep Learning",
+  "Precision Farming",
+],
 };
 
 export default function Home() {
