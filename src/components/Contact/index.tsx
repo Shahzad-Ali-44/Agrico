@@ -14,6 +14,9 @@ const Contact = () => {
     const name = e.target.name.value.trim();
     const email = e.target.email.value.trim();
     const message = e.target.message.value.trim();
+    const subject = 'New Contact Form Submission from AGRICO';
+    const website = 'AGRICO'
+    
 
 
     if (!name || !email || !message) {
@@ -41,6 +44,8 @@ const Contact = () => {
           name,
           email,
           message,
+          subject,
+          website
         }),
       });
 

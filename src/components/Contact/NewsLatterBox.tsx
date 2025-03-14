@@ -34,6 +34,9 @@ const NewsLatterBox = () => {
       return;
     }
 
+    const subject = 'New Contact Form Submission from AGRICO';
+    const website = 'AGRICO'
+
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -45,7 +48,9 @@ const NewsLatterBox = () => {
           access_key: process.env.NEXT_PUBLIC_AccessKey,
           name,
           email,
-          message: `${email} just subscribe!`
+          message: `${email} just subscribe!`,
+          subject,
+          website
         }),
       });
 
