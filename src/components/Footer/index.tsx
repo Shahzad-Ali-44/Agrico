@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
+      <footer className="relative z-10 bg-gray-100 pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
@@ -27,7 +27,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                   >
                     <svg
                       width="18"
@@ -47,7 +47,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                   >
                     <svg
                       width="18"
@@ -69,7 +69,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mr-6 text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="mr-6 text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                   >
                     <svg
                       width="18"
@@ -85,7 +85,7 @@ const Footer = () => {
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    className="text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                   >
                     <svg
                       width="17"
@@ -109,21 +109,21 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                     >Home
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/about"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                     >About
                     </Link>
                   </li>
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                     >Contact us
                     </Link>
                   </li>
@@ -140,7 +140,7 @@ const Footer = () => {
                   
                   <li>
                     <a
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                     >
                       Privacy Policy
                     </a>
@@ -159,7 +159,7 @@ const Footer = () => {
                   <li>
                     <Link
                       href="/contact"
-                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-lime-600 dark:text-body-color-dark dark:hover:text-lime-600"
                     >
                       Open Support Ticket
                     </Link>
@@ -170,9 +170,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-[#959CB183]"></div>
           <div className="py-8">
-            <p className="text-center text-base text-body-color dark:text-white">
+            <p className="text-center text-base text-black dark:text-white">
             © {new Date().getFullYear()} Agrico | All Rights Reserved |  Developed by <a className="underline" target="_blank" href="https://www.linkedin.com/in/shahzad-ali-8817632ab/">Shahzad Ali</a>
             </p>
           </div>
