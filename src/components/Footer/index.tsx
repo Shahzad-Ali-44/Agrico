@@ -173,7 +173,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-black dark:text-white">
-            © {new Date().getFullYear()} Agrico | All Rights Reserved |  Developed by <a className="underline" target="_blank" href="https://www.linkedin.com/in/shahzad-ali-8817632ab/">Shahzad Ali</a>
+            © {new Date().getFullYear()} Agrico | All Rights Reserved |  Developed by <a className="underline" target="_blank" href="https://shahzadali.vercel.app/">Shahzad Ali</a>
             </p>
           </div>
         </div>
