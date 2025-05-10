@@ -1,4 +1,4 @@
-# Agrico
+# Agrico - AI Powered Rice Crop Diseases Detection
 
 Agrico is an AI-powered web application designed to detect early rice crop diseases and provide effective treatment recommendations. This innovative solution helps farmers improve crop health and yield by leveraging deep learning models.
 
@@ -15,7 +15,7 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
 
 **Clone the Repository**:
    ```bash
-   git clone https://github.com/Shahzad-Ali-44/Agrico-AI-Powered-App-For-Early-Rice-Crops-Disease-Detection.git
+   git clone https://github.com/Shahzad-Ali-44/Agrico.git
    ```
 
 
