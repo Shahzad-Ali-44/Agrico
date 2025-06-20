@@ -31,7 +31,7 @@ const RiceDiseaseDetection: React.FC = () => {
     formData.append("file", image);
 
     try {
-      const response = await fetch("https://ricemodelbackend-production.up.railway.app/predict", {
+      const response = await fetch(process.env.NEXT_PUBLIC_API_URL, {
         method: "POST",
         body: formData,
       });
