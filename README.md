@@ -42,6 +42,8 @@ To enable the contact form functionality, follow these steps:
    - Add the following entry to your `.env.local` file:
      ```env
      NEXT_PUBLIC_AccessKey=your-access-key-here
+     NEXT_PUBLIC_API_URL= https://ShahzadAli44-Agrico-backend.hf.space/predict
+
      ```
 
 3. **How It Works**:
