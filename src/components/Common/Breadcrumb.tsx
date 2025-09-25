@@ -9,113 +9,48 @@ const Breadcrumb = ({
 }) => {
   return (
     <>
-      <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 md:w-8/12 lg:w-7/12">
-              <div className="mb-8 max-w-[570px] md:mb-0 lg:mb-12">
-                <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+      <section className="relative overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+        {/* Floating Background Elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
+          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-3xl animate-float-slow"></div>
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-8 items-start lg:items-center">
+            <div className="lg:col-span-8 order-2 lg:order-1">
+              <div className="mb-6 lg:mb-12">
+                <h1 className="mb-4 text-2xl font-bold leading-tight text-gray-900 dark:text-white sm:text-3xl md:text-4xl lg:text-5xl">
                   {pageName}
                 </h1>
-                <p className="text-base font-medium leading-relaxed text-body-color">
+                <p className="text-base leading-relaxed text-gray-600 dark:text-gray-300 sm:text-lg md:text-xl lg:text-2xl max-w-3xl">
                   {description}
                 </p>
               </div>
             </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
-              <div className="text-end">
-                <ul className="flex items-center md:justify-end">
-                  <li className="flex items-center">
-                    <Link
-                      href="/"
-                      className="pr-1 text-base font-medium text-body-color hover:text-lime-600"
-                    >
-                      Home
-                    </Link>
-                    <span className="mr-3 block h-2 w-2 rotate-45 border-r-2 border-t-2 border-body-color"></span>
-                  </li>
-                  <li className="text-base font-medium text-lime-600">
+            <div className="lg:col-span-4 order-1 lg:order-2 w-full lg:w-auto">
+              <div className="flex justify-start lg:justify-end mb-4 lg:mb-0">
+                <nav className="flex items-center space-x-1 sm:space-x-2 bg-white dark:bg-gray-800 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-lg border border-white/20 dark:border-gray-700/50 backdrop-blur-sm">
+                  <Link
+                    href="/"
+                    className="flex items-center text-sm text-gray-600 dark:text-gray-300 hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 group"
+                  >
+                    <svg className="w-3 h-3 sm:w-4 sm:h-4 mr-1 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                    </svg>
+                    <span className="font-medium">Home</span>
+                  </Link>
+                  <svg className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 mx-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                  <span className="text-sm font-semibold text-lime-600 dark:text-lime-400 truncate">
                     {pageName}
-                  </li>
-                </ul>
+                  </span>
+                </nav>
               </div>
             </div>
           </div>
-        </div>
-
-        <div>
-          <span className="absolute left-0 top-0 z-[-1]">
-            <svg
-              width="287"
-              height="254"
-              viewBox="0 0 287 254"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.1"
-                d="M286.5 0.5L-14.5 254.5V69.5L286.5 0.5Z"
-                fill="url(#paint0_linear_111:578)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_111:578"
-                  x1="-40.5"
-                  y1="117"
-                  x2="301.926"
-                  y2="-97.1485"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
-          <span className="absolute right-0 top-0 z-[-1]">
-            <svg
-              width="628"
-              height="258"
-              viewBox="0 0 628 258"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.1"
-                d="M669.125 257.002L345.875 31.9983L524.571 -15.8832L669.125 257.002Z"
-                fill="url(#paint0_linear_0:1)"
-              />
-              <path
-                opacity="0.1"
-                d="M0.0716344 182.78L101.988 -15.0769L142.154 81.4093L0.0716344 182.78Z"
-                fill="url(#paint1_linear_0:1)"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_0:1"
-                  x1="644"
-                  y1="221"
-                  x2="429.946"
-                  y2="37.0429"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-                <linearGradient
-                  id="paint1_linear_0:1"
-                  x1="18.3648"
-                  y1="166.016"
-                  x2="105.377"
-                  y2="32.3398"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop stopColor="#4A6CF7" />
-                  <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
-          </span>
         </div>
       </section>
     </>

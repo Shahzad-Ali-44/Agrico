@@ -12,28 +12,48 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   let ratingIcons = [];
   for (let index = 0; index < star; index++) {
     ratingIcons.push(
-      <span key={index} className="text-yellow">
+      <span key={index} className="text-yellow-400">
         {starIcon}
       </span>,
     );
   }
 
   return (
-    <div className="w-full">
-      <div className="rounded-sm bg-white p-8 shadow-two duration-300 hover:shadow-one dark:bg-dark dark:shadow-three dark:hover:shadow-gray-dark lg:px-5 xl:px-8">
-        <div className="mb-5 flex items-center space-x-1">{ratingIcons}</div>
-        <p className="mb-8 border-b border-body-color border-opacity-10 pb-8 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-10 dark:text-white">
-          “{content}
-        </p>
-        <div className="flex items-center">
-          <div className="relative mr-4 h-[50px] w-full max-w-[50px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill />
+    <div className="w-full group h-full">
+      <div className="relative h-full flex flex-col">
+        {/* Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+        
+        {/* Card */}
+        <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-gray-700/50 backdrop-blur-sm flex flex-col h-full">
+          {/* Stars */}
+          <div className="mb-4 flex items-center space-x-1">
+            {ratingIcons}
           </div>
-          <div className="w-full">
-            <h3 className="mb-1 text-lg font-semibold text-dark dark:text-white lg:text-base xl:text-lg">
-              {name}
-            </h3>
-            <p className="text-sm text-body-color">{designation}</p>
+          
+          {/* Quote */}
+          <div className="mb-6 flex-1">
+            <svg className="w-8 h-8 text-lime-500 mb-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
+            </svg>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base">
+              {content}
+            </p>
+          </div>
+          
+          {/* Author */}
+          <div className="flex items-center pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto">
+            <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full ring-2 ring-lime-500/20">
+              <Image src={image} alt={name} fill className="object-cover" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                {name}
+              </h3>
+              <p className="text-sm text-gray-600 dark:text-gray-400 font-medium">
+                {designation}
+              </p>
+            </div>
           </div>
         </div>
       </div>
