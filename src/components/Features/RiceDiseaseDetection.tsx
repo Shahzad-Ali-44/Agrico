@@ -191,7 +191,7 @@ const RiceDiseaseDetection: React.FC = () => {
           type="submit"
           className={`group relative w-full py-4 px-6 rounded-xl font-semibold text-white transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-lime-500 focus:ring-offset-2 ${
             loading 
-              ? "bg-lime-600 cursor-not-allowed" 
+              ? "bg-gray-400 cursor-not-allowed" 
               : "bg-gradient-to-r from-lime-600 to-green-600 hover:from-lime-700 hover:to-green-700 hover:scale-105 hover:shadow-lg hover:shadow-lime-500/25"
           }`}
           disabled={loading}
@@ -273,14 +273,9 @@ const ResultsModal: React.FC<{
         <div className="relative p-4 sm:p-8 border-b border-white/20 dark:border-gray-700/50">
           <div className="flex items-center justify-between">
             <div className="flex items-center flex-1 min-w-0">
-              <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-r from-lime-500 to-green-500 text-white mr-3 sm:mr-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 flex-shrink-0">
-                <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
               <div className="min-w-0 flex-1">
                 <div className="mb-1 sm:mb-2 inline-flex items-center rounded-full bg-lime-100 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
-                  🔬 AI Analysis Complete
+                   AI Analysis Complete
                 </div>
                 <h3 className="text-lg sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 truncate">
                   Disease Detection Results
@@ -305,7 +300,7 @@ const ResultsModal: React.FC<{
             <div className="space-y-4 sm:space-y-6">
               <div className="text-center">
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
-                  📸 Uploaded Image
+                   Uploaded Image
                 </h4>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   Your uploaded rice leaf image
@@ -330,7 +325,7 @@ const ResultsModal: React.FC<{
             <div className="space-y-4 sm:space-y-6">
               <div className="text-center">
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
-                  🔬 AI Analysis Results
+                   AI Analysis Results
                 </h4>
                 <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                   Detailed disease detection findings
