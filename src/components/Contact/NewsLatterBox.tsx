@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from 'react-dom';
 import { useTheme } from "next-themes";
+import { sendNewsletterEmail } from "../../utils/emailService";
 
 const NewsLatterBox = () => {
   const [errors, setErrors] = useState<{
@@ -10,7 +11,7 @@ const NewsLatterBox = () => {
     email?: string;
   }>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [toast, setToast] = useState<{
+  const [popup, setPopup] = useState<{
     show: boolean;
     type: 'success' | 'error';
     title: string;
@@ -21,9 +22,8 @@ const NewsLatterBox = () => {
     title: '',
     message: ''
   });
-  const toastTimerRef = useRef<NodeJS.Timeout | null>(null);
-  const showToast = (type: 'success' | 'error', title: string, message: string) => {
-    setToast({
+  const showPopup = (type: 'success' | 'error', title: string, message: string) => {
+    setPopup({
       show: true,
       type,
       title,
@@ -31,41 +31,9 @@ const NewsLatterBox = () => {
     });
   };
 
-  const hideToast = () => {
-    if (toastTimerRef.current) {
-      clearTimeout(toastTimerRef.current);
-      toastTimerRef.current = null;
-    }
-    setToast(prev => ({ ...prev, show: false }));
+  const hidePopup = () => {
+    setPopup(prev => ({ ...prev, show: false }));
   };
-
-  const startToastTimer = useCallback(() => {
-    if (toastTimerRef.current) {
-      clearTimeout(toastTimerRef.current);
-      toastTimerRef.current = null;
-    }
-    toastTimerRef.current = setTimeout(() => {
-      hideToast();
-    }, 5000);
-  }, []);
-
-  const pauseToastTimer = () => {
-    if (toastTimerRef.current) {
-      clearTimeout(toastTimerRef.current);
-      toastTimerRef.current = null;
-    }
-  };
-
-  useEffect(() => {
-    if (toast.show) {
-      startToastTimer();
-      return () => {
-        if (toastTimerRef.current) {
-          clearTimeout(toastTimerRef.current);
-        }
-      };
-    }
-  }, [toast.show, startToastTimer]);
 
   const { theme } = useTheme();
   const [email, setEmail] = useState("");
@@ -149,34 +117,22 @@ const NewsLatterBox = () => {
     const website = 'AGRICO'
 
     try {
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-        body: JSON.stringify({
-          access_key: process.env.NEXT_PUBLIC_AccessKey,
-          name: formData.name,
-          email: formData.email,
-          message: `${formData.name} (${formData.email}) just subscribed to newsletter!`,
-          subject,
-          website
-        }),
+      const result = await sendNewsletterEmail({
+        name: formData.name,
+        email: formData.email
       });
 
-      const result = await response.json();
       if (result.success) {
-        showToast('success', 'Welcome to AGRICO!', 'You will receive our latest updates.');
+        showPopup('success', 'Welcome to AGRICO!', 'You will receive our latest updates.');
         setEmail("");
         setName("");
         setErrors({});
       } else {
-        showToast('error', 'Subscription Failed', result.message || 'Please try again later.');
+        showPopup('error', 'Subscription Failed', result.message || 'Please try again later.');
       }
     } catch (error) {
       console.error(error);
-      showToast('error', 'Network Error', 'Failed to subscribe. Please check your internet connection and try again.');
+      showPopup('error', 'Network Error', 'Failed to subscribe. Please check your internet connection and try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -277,66 +233,58 @@ const NewsLatterBox = () => {
         </form>
       </div>
 
-      {typeof window !== 'undefined' && toast.show && createPortal(
-        <div className="fixed top-24 right-4 left-4 sm:left-auto sm:top-4 z-[999999] animate-slide-in"
-             onMouseEnter={pauseToastTimer}
-             onMouseLeave={startToastTimer}>
-          <div className={`relative group max-w-sm w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 backdrop-blur-sm overflow-hidden ${
-            toast.type === 'success' 
+      {popup.show && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4">
+          <div className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 backdrop-blur-sm overflow-hidden animate-slide-in ${
+            popup.type === 'success' 
               ? 'border-l-4 border-l-blue-500' 
               : 'border-l-4 border-l-red-500'
           }`}>
             <div className={`absolute inset-0 opacity-10 ${
-              toast.type === 'success' 
+              popup.type === 'success' 
                 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 
                 : 'bg-gradient-to-r from-red-500 to-pink-500'
             }`}></div>
             
-            <div className="relative p-6">
+            <div className="relative p-8">
               <div className="flex items-start">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
-                  toast.type === 'success' 
+                <div className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center mr-6 ${
+                  popup.type === 'success' 
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 
                     : 'bg-gradient-to-r from-red-500 to-pink-500'
                 }`}>
-                  {toast.type === 'success' ? (
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {popup.type === 'success' ? (
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   ) : (
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   )}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                    {toast.title}
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    {popup.title}
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {toast.message}
+                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                    {popup.message}
                   </p>
+                  <button
+                    onClick={hidePopup}
+                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                      popup.type === 'success'
+                        ? 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
+                        : 'bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
+                    }`}
+                  >
+                    OK
+                  </button>
                 </div>
-                <button
-                  onClick={hideToast}
-                  className="flex-shrink-0 ml-4 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
-                >
-                  <svg className="w-5 h-5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
               </div>
             </div>
-            <div className="absolute bottom-0 left-0 h-1 bg-gray-200 dark:bg-gray-700 w-full">
-              <div className={`h-full ${
-                toast.type === 'success' 
-                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 
-                  : 'bg-gradient-to-r from-red-500 to-pink-500'
-              }`}></div>
-            </div>
           </div>
-        </div>,
-        document.body
+        </div>
       )}
     </div>
   );

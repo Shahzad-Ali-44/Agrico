@@ -33,22 +33,24 @@ Agrico is an AI-powered web application designed to detect early rice crop disea
 
 ## Contact Form Configuration
 
-To enable the contact form functionality, follow these steps:
+The contact form uses SMTP to send emails directly. Configure your email settings:
 
-1. **Get an Access Key**:
-   - Visit [Web3Forms](https://web3forms.com/) and sign up to get your free access key.
-
-2. **Update the `.env.local` File**:
-   - Add the following entry to your `.env.local` file:
+1. **Update the `.env.local` File**:
+   - Add the following entries to your `.env.local` file:
      ```env
-     NEXT_PUBLIC_AccessKey=your-access-key-here
-     NEXT_PUBLIC_API_URL= https://ShahzadAli44-Agrico-backend.hf.space/predict
-
+     SMTP_HOST=smtp.gmail.com
+     SMTP_PORT=587
+     SMTP_SECURE=false
+     SMTP_USER=your-email@gmail.com
+     SMTP_PASS=your-app-password
+     SMTP_FROM=your-email@gmail.com
+     SMTP_TO=recipient@example.com
+     NEXT_PUBLIC_API_URL=https://ShahzadAli44-Agrico-backend.hf.space/predict
      ```
 
-3. **How It Works**:
-   - The contact form uses the Web3Forms API to send messages to the email address you configure in your Web3Forms account.
-   - Ensure your application has internet access to communicate with the Web3Forms API.
+2. **How It Works**:
+   - The contact form uses SMTP to send messages directly to your email.
+   - Professional email templates are automatically generated.
 
 ## 🛠 Technology Stack
 
