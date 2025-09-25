@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { createPortal } from 'react-dom';
 import { useTheme } from "next-themes";
 
@@ -39,7 +39,7 @@ const NewsLatterBox = () => {
     setToast(prev => ({ ...prev, show: false }));
   };
 
-  const startToastTimer = () => {
+  const startToastTimer = useCallback(() => {
     if (toastTimerRef.current) {
       clearTimeout(toastTimerRef.current);
       toastTimerRef.current = null;
@@ -47,7 +47,7 @@ const NewsLatterBox = () => {
     toastTimerRef.current = setTimeout(() => {
       hideToast();
     }, 5000);
-  };
+  }, []);
 
   const pauseToastTimer = () => {
     if (toastTimerRef.current) {
@@ -65,7 +65,7 @@ const NewsLatterBox = () => {
         }
       };
     }
-  }, [toast.show]);
+  }, [toast.show, startToastTimer]);
 
   const { theme } = useTheme();
   const [email, setEmail] = useState("");
@@ -167,7 +167,7 @@ const NewsLatterBox = () => {
 
       const result = await response.json();
       if (result.success) {
-        showToast('success', 'Welcome to AGRICO!', 'You\'ll receive our latest updates.');
+        showToast('success', 'Welcome to AGRICO!', 'You will receive our latest updates.');
         setEmail("");
         setName("");
         setErrors({});

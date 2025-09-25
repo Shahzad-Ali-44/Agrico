@@ -12,7 +12,7 @@ const Hero = () => {
             <div className="w-full px-4">
               <div className="mx-auto max-w-[900px] text-center">
                 <div className="mb-8 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
-                  🌱 AI-Powered Agriculture Solution
+                   AI-Powered Agriculture Solution
                 </div>
                 <h1 className="mb-8 text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight lg:text-6xl lg:leading-tight max-w-5xl mx-auto">
                   Revolutionize Agriculture with{" "}

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useRef } from "react";
 import { createPortal } from "react-dom";
+import Image from "next/image";
 
 const RiceDiseaseDetection: React.FC = () => {
   const [image, setImage] = useState<File | null>(null);
@@ -133,9 +134,11 @@ const RiceDiseaseDetection: React.FC = () => {
             {imagePreview && image ? (
               <div className="p-6" key={`preview-${image.name}`}>
                 <div className="relative">
-                  <img
+                  <Image
                     src={imagePreview}
                     alt="Preview"
+                    width={400}
+                    height={192}
                     className="w-full h-48 object-cover rounded-lg shadow-md"
                   />
                   <button
@@ -311,9 +314,11 @@ const ResultsModal: React.FC<{
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-2 sm:p-4 shadow-lg">
-                  <img
+                  <Image
                     src={imagePreview}
                     alt="Uploaded rice leaf"
+                    width={400}
+                    height={288}
                     className="w-full h-48 sm:h-64 lg:h-72 object-cover rounded-lg sm:rounded-xl shadow-md"
                   />
                   <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black/70 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">

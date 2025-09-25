@@ -24,9 +24,8 @@ const Footer = () => {
                    height={40}
                  />
                </Link>
-              <p className="text-gray-300 leading-relaxed text-xl mb-6">
-                🌱 <span className="text-white font-bold">AGRICO</span> - Your trusted partner in smart agriculture. 
-                We're revolutionizing farming with AI-powered disease detection, 
+              <p className="text-gray-300 leading-relaxed text-xl mb-6"><span className="text-white font-bold">AGRICO</span> - Your trusted partner in smart agriculture. 
+                We are revolutionizing farming with AI-powered disease detection, 
                 helping farmers make informed decisions for better crop yields.
               </p>
             </div>

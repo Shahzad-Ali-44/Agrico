@@ -1,6 +1,6 @@
 "use client"
 import NewsLatterBox from "./NewsLatterBox";
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { createPortal } from 'react-dom';
 
 const Contact = () => {
@@ -41,7 +41,7 @@ const Contact = () => {
     setToast(prev => ({ ...prev, show: false }));
   };
 
-  const startToastTimer = () => {
+  const startToastTimer = useCallback(() => {
     if (toastTimerRef.current) {
       clearTimeout(toastTimerRef.current);
       toastTimerRef.current = null;
@@ -49,7 +49,7 @@ const Contact = () => {
     toastTimerRef.current = setTimeout(() => {
       hideToast();
     }, 5000);
-  };
+  }, []);
 
   const pauseToastTimer = () => {
     if (toastTimerRef.current) {
@@ -67,7 +67,7 @@ const Contact = () => {
         }
       };
     }
-  }, [toast.show]);
+  }, [toast.show, startToastTimer]);
 
   const validateName = (name: string): string | null => {
     if (!name || name.trim().length === 0) {
@@ -171,7 +171,7 @@ const Contact = () => {
 
       const result = await response.json();
       if (result.success) {
-        showToast('success', 'Message Sent Successfully!', 'Thank you for contacting us. We\'ll get back to you soon!');
+        showToast('success', 'Message Sent Successfully!', 'Thank you for contacting us. We will get back to you soon!');
         form.reset();
         setErrors({});
       } else {
@@ -199,7 +199,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="mb-4 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
-            📞 Get In Touch
+             Get In Touch
           </div>
           <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
             Need Help?{" "}
@@ -208,7 +208,7 @@ const Contact = () => {
             </span>
               </h2>
           <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300 sm:text-xl md:text-2xl max-w-4xl mx-auto">
-            Our support team will get back to you ASAP via email. We're here to help with any questions about AGRICO.
+            Our support team will get back to you ASAP via email. We are here to help with any questions about AGRICO.
           </p>
         </div>
 
@@ -221,7 +221,7 @@ const Contact = () => {
                   Send us a Message
                 </h3>
                 <p className="mb-8 text-gray-600 dark:text-gray-300">
-                  Fill out the form below and we'll get back to you as soon as possible.
+                  Fill out the form below and we will get back to you as soon as possible.
               </p>
               <form onSubmit={handleSubmit}>
                   <div className="space-y-6">
