@@ -126,7 +126,7 @@ const AboutSectionOne = () => {
             </div>
           </div>
 
-          {/* Image */}
+          
           <div className="relative">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>

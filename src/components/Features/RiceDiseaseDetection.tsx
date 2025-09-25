@@ -13,7 +13,6 @@ const RiceDiseaseDetection: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const processFile = (file: File) => {
-    // Validate file type
     if (!file.type.startsWith('image/')) {
       setError('Please upload an image file only.');
       return;
@@ -22,8 +21,6 @@ const RiceDiseaseDetection: React.FC = () => {
     setImage(file);
     setResult(null);
     setError(null);
-    
-    // Create preview
     const reader = new FileReader();
     reader.onload = (e) => {
       setImagePreview(e.target?.result as string);
@@ -36,7 +33,6 @@ const RiceDiseaseDetection: React.FC = () => {
     setImagePreview(null);
     setResult(null);
     setError(null);
-    // Reset the file input
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -124,7 +120,6 @@ const RiceDiseaseDetection: React.FC = () => {
             Upload Rice Leaf Image
           </label>
           
-          {/* Drag and Drop Area */}
           <div
             className={`relative border-2 border-dashed rounded-xl transition-all duration-300 ${
               isDragOver
@@ -230,13 +225,11 @@ const RiceDiseaseDetection: React.FC = () => {
         </div>
       )}
       
-      {/* Results Modal - Rendered via Portal */}
       {typeof window !== 'undefined' && createPortal(
         <ResultsModal
           isOpen={showModal}
           onClose={() => {
             setShowModal(false);
-            // Reset all states when modal closes
             setImage(null);
             setImagePreview(null);
             setResult(null);
@@ -256,7 +249,6 @@ const RiceDiseaseDetection: React.FC = () => {
   );
 };
 
-// Results Modal Component
 const ResultsModal: React.FC<{
   isOpen: boolean;
   onClose: () => void;
@@ -268,7 +260,6 @@ const ResultsModal: React.FC<{
 
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-md">
-      {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
@@ -276,7 +267,6 @@ const ResultsModal: React.FC<{
       </div>
       
       <div className="bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-5xl w-full mx-2 sm:mx-4 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-white/20 dark:border-gray-700/50 backdrop-blur-sm">
-        {/* Modal Header */}
         <div className="relative p-4 sm:p-8 border-b border-white/20 dark:border-gray-700/50">
           <div className="flex items-center justify-between">
             <div className="flex items-center flex-1 min-w-0">
@@ -307,11 +297,8 @@ const ResultsModal: React.FC<{
             </button>
           </div>
         </div>
-
-        {/* Modal Content */}
         <div className="p-4 sm:p-6 lg:p-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
-            {/* Uploaded Image */}
             <div className="space-y-4 sm:space-y-6">
               <div className="text-center">
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
@@ -335,8 +322,6 @@ const ResultsModal: React.FC<{
                 </div>
               </div>
             </div>
-
-            {/* Results */}
             <div className="space-y-4 sm:space-y-6">
               <div className="text-center">
                 <h4 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2">
@@ -411,8 +396,6 @@ const ResultsModal: React.FC<{
             </div>
           </div>
         </div>
-
-        {/* Modal Footer */}
         <div className="relative p-4 sm:p-6 lg:p-8 border-t border-white/20 dark:border-gray-700/50">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-0">
             <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 text-center sm:text-left">

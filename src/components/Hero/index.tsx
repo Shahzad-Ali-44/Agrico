@@ -54,7 +54,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        {/* Floating Elements */}
         <div className="absolute top-20 right-10 z-0 animate-float">
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-lime-400/20 to-green-400/20 blur-xl"></div>
         </div>

@@ -6,7 +6,7 @@ const Features = () => {
     <>
       <section id="features" className="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
-          {/* Section Header */}
+      
           <div className="text-center mb-16">
             <div className="mb-4 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
               🔬 AI Technology

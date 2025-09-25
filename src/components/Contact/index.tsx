@@ -23,7 +23,7 @@ const Contact = () => {
   });
   const toastTimerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Toast functions
+  
   const showToast = (type: 'success' | 'error', title: string, message: string) => {
     setToast({
       show: true,
@@ -58,7 +58,6 @@ const Contact = () => {
     }
   };
 
-  // Auto hide toast after 5 seconds
   useEffect(() => {
     if (toast.show) {
       startToastTimer();
@@ -70,7 +69,6 @@ const Contact = () => {
     }
   }, [toast.show]);
 
-  // Validation functions
   const validateName = (name: string): string | null => {
     if (!name || name.trim().length === 0) {
       return "Name is required";
@@ -144,8 +142,6 @@ const Contact = () => {
       email: (form.elements.namedItem('email') as HTMLInputElement).value.trim(),
       message: (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim()
     };
-
-    // Validate form
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -194,7 +190,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="relative py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
-      {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
@@ -202,7 +197,6 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <div className="mb-4 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
             📞 Get In Touch
@@ -372,7 +366,6 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Custom Toast - Rendered via Portal */}
       {typeof window !== 'undefined' && toast.show && createPortal(
         <div className="fixed top-24 right-4 left-4 sm:left-auto sm:top-4 z-[999999] animate-slide-in"
              onMouseEnter={pauseToastTimer}
@@ -382,7 +375,6 @@ const Contact = () => {
               ? 'border-l-4 border-l-lime-500' 
               : 'border-l-4 border-l-red-500'
           }`}>
-            {/* Background Gradient */}
             <div className={`absolute inset-0 opacity-10 ${
               toast.type === 'success' 
                 ? 'bg-gradient-to-r from-lime-500 to-green-500' 
@@ -391,7 +383,6 @@ const Contact = () => {
             
             <div className="relative p-6">
               <div className="flex items-start">
-                {/* Icon */}
                 <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
                   toast.type === 'success' 
                     ? 'bg-gradient-to-r from-lime-500 to-green-500' 
@@ -407,8 +398,6 @@ const Contact = () => {
                     </svg>
                   )}
                 </div>
-                
-                {/* Content */}
                 <div className="flex-1 min-w-0">
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                     {toast.title}
@@ -417,8 +406,6 @@ const Contact = () => {
                     {toast.message}
                   </p>
                 </div>
-                
-                {/* Close Button */}
                 <button
                   onClick={hideToast}
                   className="flex-shrink-0 ml-4 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
@@ -429,8 +416,6 @@ const Contact = () => {
                 </button>
               </div>
             </div>
-            
-            {/* Progress Bar - Static for better hover control */}
             <div className="absolute bottom-0 left-0 h-1 bg-gray-200 dark:bg-gray-700 w-full">
               <div className={`h-full ${
                 toast.type === 'success' 

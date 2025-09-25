@@ -22,8 +22,6 @@ const NewsLatterBox = () => {
     message: ''
   });
   const toastTimerRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Toast functions
   const showToast = (type: 'success' | 'error', title: string, message: string) => {
     setToast({
       show: true,
@@ -58,7 +56,6 @@ const NewsLatterBox = () => {
     }
   };
 
-  // Auto hide toast after 5 seconds
   useEffect(() => {
     if (toast.show) {
       startToastTimer();
@@ -76,7 +73,6 @@ const NewsLatterBox = () => {
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
-    // Clear error when user fixes the input
     const value = e.target.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (errors.email && value.length > 0 && emailRegex.test(value) && value.length <= 100) {
@@ -86,14 +82,11 @@ const NewsLatterBox = () => {
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
-    // Clear error when user fixes the input
     const value = e.target.value.trim();
     if (errors.name && value.length >= 2 && /^[a-zA-Z\s]+$/.test(value) && value.length <= 50) {
       setErrors(prev => ({ ...prev, name: undefined }));
     }
   };
-
-  // Validation functions
   const validateName = (name: string): string | null => {
     if (!name || name.trim().length === 0) {
       return "Name is required";
@@ -145,8 +138,6 @@ const NewsLatterBox = () => {
       name: name.trim(),
       email: email.trim()
     };
-
-    // Validate form
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -286,7 +277,6 @@ const NewsLatterBox = () => {
         </form>
       </div>
 
-      {/* Custom Toast - Rendered via Portal */}
       {typeof window !== 'undefined' && toast.show && createPortal(
         <div className="fixed top-24 right-4 left-4 sm:left-auto sm:top-4 z-[999999] animate-slide-in"
              onMouseEnter={pauseToastTimer}
@@ -296,7 +286,6 @@ const NewsLatterBox = () => {
               ? 'border-l-4 border-l-blue-500' 
               : 'border-l-4 border-l-red-500'
           }`}>
-            {/* Background Gradient */}
             <div className={`absolute inset-0 opacity-10 ${
               toast.type === 'success' 
                 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 
@@ -305,7 +294,6 @@ const NewsLatterBox = () => {
             
             <div className="relative p-6">
               <div className="flex items-start">
-                {/* Icon */}
                 <div className={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center mr-4 ${
                   toast.type === 'success' 
                     ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 
@@ -321,8 +309,6 @@ const NewsLatterBox = () => {
                     </svg>
                   )}
                 </div>
-                
-                {/* Content */}
                 <div className="flex-1 min-w-0">
                   <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                     {toast.title}
@@ -331,8 +317,6 @@ const NewsLatterBox = () => {
                     {toast.message}
                   </p>
                 </div>
-                
-                {/* Close Button */}
                 <button
                   onClick={hideToast}
                   className="flex-shrink-0 ml-4 p-1 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200"
@@ -343,8 +327,6 @@ const NewsLatterBox = () => {
                 </button>
               </div>
             </div>
-            
-            {/* Progress Bar - Static for better hover control */}
             <div className="absolute bottom-0 left-0 h-1 bg-gray-200 dark:bg-gray-700 w-full">
               <div className={`h-full ${
                 toast.type === 'success' 

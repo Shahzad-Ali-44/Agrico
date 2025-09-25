@@ -7,7 +7,6 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
-  
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarRef = useRef<HTMLDivElement>(null);
   
@@ -15,7 +14,6 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
 
-  // Close navbar when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
@@ -32,7 +30,6 @@ const Header = () => {
     };
   }, [navbarOpen]);
 
-  
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
     if (window.scrollY >= 80) {
@@ -48,7 +45,6 @@ const Header = () => {
     };
   }, []);
 
-  
   const [openIndex, setOpenIndex] = useState(-1);
   const handleSubmenu = (index: number) => {
     if (openIndex === index) {
@@ -71,7 +67,6 @@ const Header = () => {
       >
         <div className="container mx-auto px-4">
           <div className="relative flex items-center justify-between">
-            {/* Logo */}
             <div className="flex-shrink-0">
               <Link
                 href="/"
@@ -95,10 +90,7 @@ const Header = () => {
                 />
               </Link>
             </div>
-
-            {/* Navigation and Theme Toggler */}
             <div ref={navbarRef} className="flex items-center justify-center flex-1">
-              {/* Mobile Menu Button */}
               <button
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
@@ -121,8 +113,6 @@ const Header = () => {
                   }`}
                 />
               </button>
-
-              {/* Navigation Menu - Centered */}
               <nav
                 id="navbarCollapse"
                 className={`navbar absolute right-0 z-30 w-[280px] rounded-2xl border border-gray-200/50 bg-white/95 backdrop-blur-md px-6 py-6 duration-300 dark:border-gray-700/50 dark:bg-gray-900/95 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 shadow-xl lg:shadow-none ${
@@ -184,8 +174,6 @@ const Header = () => {
                   ))}
                 </ul>
               </nav>
-
-              {/* Theme Toggler - Positioned absolutely on the right */}
               <div className="absolute right-20 top-1/2 translate-y-[-50%] lg:right-4 z-40">
                 <ThemeToggler />
               </div>

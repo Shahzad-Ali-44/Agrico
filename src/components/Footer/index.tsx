@@ -6,7 +6,6 @@ const Footer = () => {
   return (
     <>
       <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
-        {/* Floating Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
@@ -15,7 +14,6 @@ const Footer = () => {
 
         <div className="container mx-auto px-4 pt-16 md:pt-20 lg:pt-24 pb-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Company Info */}
             <div>
                <Link href="/" className="inline-block mb-6">
                  <Image
@@ -32,15 +30,12 @@ const Footer = () => {
                 helping farmers make informed decisions for better crop yields.
               </p>
             </div>
-
-            {/* Navigation & Features */}
             <div>
               <h3 className="text-3xl font-bold text-white mb-8">
                 🌾 Quick Access
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                {/* Navigation */}
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -84,8 +79,6 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                
-                {/* Features */}
                 <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,8 +120,6 @@ const Footer = () => {
             </div>
 
           </div>
-
-          {/* Footer Bottom */}
           <div className="border-t border-gray-700/50 mt-12 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <p className="text-gray-400 text-sm">

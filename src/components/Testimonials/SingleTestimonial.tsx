@@ -21,17 +21,13 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="w-full group h-full">
       <div className="relative h-full flex flex-col">
-        {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
         
-        {/* Card */}
         <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-gray-700/50 backdrop-blur-sm flex flex-col h-full">
-          {/* Stars */}
           <div className="mb-4 flex items-center space-x-1">
             {ratingIcons}
           </div>
           
-          {/* Quote */}
           <div className="mb-6 flex-1">
             <svg className="w-8 h-8 text-lime-500 mb-3" fill="currentColor" viewBox="0 0 24 24">
               <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h4v10h-10z"/>
@@ -41,7 +37,6 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
             </p>
           </div>
           
-          {/* Author */}
           <div className="flex items-center pt-4 border-t border-gray-200 dark:border-gray-700 mt-auto">
             <div className="relative mr-4 h-12 w-12 overflow-hidden rounded-full ring-2 ring-lime-500/20">
               <Image src={image} alt={name} fill className="object-cover" />
