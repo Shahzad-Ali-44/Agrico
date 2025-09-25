@@ -14,6 +14,10 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
 
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navbarRef.current && !navbarRef.current.contains(event.target as Node)) {
@@ -127,6 +131,7 @@ const Header = () => {
                       {menuItem.path ? (
                         <Link
                           href={menuItem.path}
+                          onClick={closeNavbar}
                           className={`flex py-3 px-4 text-base font-medium rounded-lg transition-all duration-300 lg:mr-0 lg:inline-flex lg:px-3 lg:py-2 lg:rounded-lg ${
                             usePathName === menuItem.path
                               ? "text-white bg-lime-600 shadow-lg dark:bg-lime-500"
@@ -162,6 +167,7 @@ const Header = () => {
                               <Link
                                 href={submenuItem.path}
                                 key={index}
+                                onClick={closeNavbar}
                                 className="block rounded-lg py-3 px-4 text-sm font-medium text-gray-700 hover:text-lime-600 hover:bg-lime-50 transition-all duration-300 dark:text-white/70 dark:hover:text-lime-400 dark:hover:bg-gray-800"
                               >
                                 {submenuItem.title}
