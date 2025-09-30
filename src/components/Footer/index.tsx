@@ -26,18 +26,18 @@ const Footer = () => {
                    priority
                  />
                </Link>
-              <p className="text-gray-300 leading-relaxed text-xl mb-6"><span className="text-white font-bold">AGRICO</span> - Your trusted partner in smart agriculture. 
+              <p className="text-gray-300 leading-relaxed text-lg sm:text-xl mb-6"><span className="text-white font-bold">AGRICO</span> - Your trusted partner in smart agriculture. 
                 We are revolutionizing farming with AI-powered disease detection, 
                 helping farmers make informed decisions for better crop yields.
               </p>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8">
                 🌾 Quick Access
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-5 sm:p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -80,7 +80,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-5 sm:p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
