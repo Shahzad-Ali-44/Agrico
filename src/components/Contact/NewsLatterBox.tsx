@@ -140,7 +140,7 @@ const NewsLatterBox = () => {
 
   return (
     <div className="relative group perf-hint">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-sm sm:blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
       <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 md:backdrop-blur-sm perf-hint">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white mb-4">
@@ -204,13 +204,13 @@ const NewsLatterBox = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`group relative w-full px-8 py-4 text-white rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl ${
+            className={`group relative w-full px-8 py-4 text-white rounded-xl font-bold text-lg transition-transform duration-300 shadow-lg sm:hover:shadow-xl gpu-hint ${
               isSubmitting 
                 ? 'bg-gray-400 cursor-not-allowed' 
-                : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 hover:scale-105'
+                : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 sm:hover:scale-105'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur-sm sm:blur opacity-0 group-hover:opacity-10 sm:group-hover:opacity-20 transition-opacity duration-300"></div>
             <span className="relative flex items-center justify-center">
               {isSubmitting ? (
                 <>
