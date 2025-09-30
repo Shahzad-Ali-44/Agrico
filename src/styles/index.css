@@ -137,8 +137,8 @@
   .blur-3xl { filter: blur(14px) !important; }
 
   /* Backdrop blur tuning */
-  .backdrop-blur-sm { backdrop-filter: blur(2px) !important; -webkit-backdrop-filter: blur(2px) !important; }
-  .backdrop-blur-md { backdrop-filter: blur(6px) !important; -webkit-backdrop-filter: blur(6px) !important; }
+  .backdrop-blur-sm { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
+  .backdrop-blur-md { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 
   /* Shadow softening to reduce paint cost while matching appearance */
   .shadow-xl { box-shadow: 0 10px 18px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.08) !important; }
@@ -148,4 +148,9 @@
   .animate-float,
   .animate-float-delayed,
   .animate-float-slow { will-change: transform; transform: translateZ(0); }
+
+  /* Slow down animations slightly on very small screens to reduce CPU/GPU */
+  .animate-float { animation-duration: 9s !important; }
+  .animate-float-delayed { animation-duration: 11s !important; }
+  .animate-float-slow { animation-duration: 13s !important; }
 }
