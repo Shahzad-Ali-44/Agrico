@@ -144,9 +144,9 @@ const Contact = () => {
   return (
     <section id="contact" className="relative py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden cv-auto perf-hint">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float gpu-hint"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed gpu-hint"></div>
-        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-3xl animate-float-slow gpu-hint"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>
+        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-slow gpu-hint"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
