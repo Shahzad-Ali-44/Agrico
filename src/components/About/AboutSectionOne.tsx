@@ -129,15 +129,15 @@ const AboutSectionOne = () => {
           
           <div className="relative">
             <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur-sm sm:blur opacity-10 sm:opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 shadow-md sm:shadow-2xl transition-all duration-300 hover:shadow-xl">
                 <div className="relative aspect-square max-w-[400px] mx-auto">
                   <Image
                     src="/images/logo/logo.png"
                     alt="AGRICO Logo"
                     fill
                     sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 400px"
-                    className="object-contain drop-shadow-lg"
+                    className="object-contain sm:drop-shadow-lg"
                   />
                 </div>
               </div>
