@@ -262,14 +262,14 @@ const ResultsModal: React.FC<{
   if (!isOpen || !result) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 sm:backdrop-blur-sm md:backdrop-blur-md perf-hint">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 sm:backdrop-blur-sm md:backdrop-blur-md perf-hint gpu-hint">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>
         <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-slow gpu-hint"></div>
       </div>
       
-      <div className="bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl sm:rounded-3xl shadow-2xl max-w-5xl w-full mx-2 sm:mx-4 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
+      <div className="bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl max-w-5xl w-full mx-2 sm:mx-4 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm gpu-hint">
         <div className="relative p-4 sm:p-8 border-b border-white/20 dark:border-gray-700/50">
           <div className="flex items-center justify-between">
             <div className="flex items-center flex-1 min-w-0">
@@ -307,7 +307,7 @@ const ResultsModal: React.FC<{
                 </p>
               </div>
               <div className="relative group">
-                <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                 <div className="relative bg-white dark:bg-gray-800 rounded-xl sm:rounded-2xl p-2 sm:p-4 shadow-lg">
                   <Image
                     src={imagePreview}
@@ -316,7 +316,7 @@ const ResultsModal: React.FC<{
                     height={288}
                     className="w-full h-48 sm:h-64 lg:h-72 object-cover rounded-lg sm:rounded-xl shadow-md"
                   />
-                  <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black/70 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium backdrop-blur-sm">
+                  <div className="absolute top-2 left-2 sm:top-4 sm:left-4 bg-black/70 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium sm:backdrop-blur-sm">
                     📁 {image?.name}
                   </div>
                 </div>
@@ -334,7 +334,7 @@ const ResultsModal: React.FC<{
               
               <div className="space-y-3 sm:space-y-4">
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-lime-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-lime-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center mb-2 sm:mb-3">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
@@ -349,7 +349,7 @@ const ResultsModal: React.FC<{
                 </div>
                 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-blue-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center mb-2 sm:mb-3">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
@@ -364,7 +364,7 @@ const ResultsModal: React.FC<{
                 </div>
                 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-orange-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center mb-2 sm:mb-3">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
@@ -379,7 +379,7 @@ const ResultsModal: React.FC<{
                 </div>
                 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
                   <div className="relative p-4 sm:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-green-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center mb-2 sm:mb-3">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
@@ -405,7 +405,7 @@ const ResultsModal: React.FC<{
               onClick={onClose}
               className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-lime-600 to-green-600 text-white rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-lime-700 hover:to-green-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
               <span className="relative flex items-center justify-center">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

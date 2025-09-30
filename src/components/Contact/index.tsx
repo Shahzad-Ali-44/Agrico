@@ -154,7 +154,7 @@ const Contact = () => {
           <div className="mb-4 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
              Get In Touch
           </div>
-          <h2 className="mb-6 text-3xl font-bold leading-tight text-gray-900 dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+          <h2 className="mb-6 text-2xl sm:text-4xl md:text-5xl font-bold leading-tight sm:leading-tight md:leading-tight text-gray-900 dark:text-white whitespace-nowrap">
             Need Help?{" "}
             <span className="bg-gradient-to-r from-lime-600 to-green-600 bg-clip-text text-transparent">
               Contact Us
