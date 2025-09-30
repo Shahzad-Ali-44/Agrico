@@ -65,7 +65,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center transition-all duration-300 min-h-[72px] ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition perf-hint"
+            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky sm:backdrop-blur-sm transition perf-hint"
             : "absolute bg-transparent perf-hint"
         }`}
       >
@@ -121,7 +121,7 @@ const Header = () => {
               </button>
               <nav
                 id="navbarCollapse"
-                className={`navbar absolute right-0 z-30 w-[280px] rounded-2xl border border-gray-200/50 bg-white/95 backdrop-blur-md px-6 py-6 duration-300 dark:border-gray-700/50 dark:bg-gray-900/95 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 shadow-xl lg:shadow-none perf-hint ${
+                className={`navbar absolute right-0 z-30 w-[280px] rounded-2xl border border-gray-200/50 bg-white/95 sm:backdrop-blur-md px-6 py-6 duration-300 dark:border-gray-700/50 dark:bg-gray-900/95 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 shadow-xl lg:shadow-none perf-hint ${
                   navbarOpen
                     ? "visibility top-full opacity-100"
                     : "invisible top-[120%] opacity-0"

@@ -262,7 +262,7 @@ const ResultsModal: React.FC<{
   if (!isOpen || !result) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm sm:backdrop-blur-md perf-hint">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 sm:backdrop-blur-sm md:backdrop-blur-md perf-hint">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>

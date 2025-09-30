@@ -22,6 +22,8 @@ const Footer = () => {
                    className="w-40 h-auto hover:scale-105 transition-transform duration-300"
                    width={160}
                    height={40}
+                   sizes="(max-width: 640px) 144px, 160px"
+                   priority
                  />
                </Link>
               <p className="text-gray-300 leading-relaxed text-xl mb-6"><span className="text-white font-bold">AGRICO</span> - Your trusted partner in smart agriculture. 

@@ -136,6 +136,7 @@ const AboutSectionOne = () => {
                     src="/images/logo/logo.png"
                     alt="AGRICO Logo"
                     fill
+                    sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 400px"
                     className="object-contain drop-shadow-lg"
                   />
                 </div>
