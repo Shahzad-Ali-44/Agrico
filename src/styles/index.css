@@ -33,6 +33,22 @@
 }
 
 @layer utilities {
+  /* Performance utilities: content-visibility & GPU hints */
+  .cv-auto {
+    content-visibility: auto;
+    contain-intrinsic-size: 1px 1000px;
+  }
+
+  .cv-hidden {
+    content-visibility: hidden;
+  }
+
+  .gpu-hint {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
   @keyframes float {
     0%, 100% {
       transform: translateY(0px);
@@ -62,16 +78,22 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .animate-float-delayed {
     animation: float-delayed 8s ease-in-out infinite;
     animation-delay: 2s;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .animate-float-slow {
     animation: float-slow 10s ease-in-out infinite;
     animation-delay: 4s;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   @keyframes slide-in {

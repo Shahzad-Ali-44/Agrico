@@ -33,7 +33,7 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="relative py-16 md:py-20 lg:py-28 bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
+    <section className="relative py-16 md:py-20 lg:py-28 bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden cv-auto">
       
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>

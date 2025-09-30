@@ -1,9 +1,23 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
 import Hero from "@/components/Hero";
-import Testimonials from "@/components/Testimonials";
+import dynamic from "next/dynamic";
+
+const Features = dynamic(() => import("@/components/Features"), {
+  loading: () => null,
+  ssr: true,
+});
+const AboutSectionOne = dynamic(() => import("@/components/About/AboutSectionOne"), {
+  loading: () => null,
+  ssr: true,
+});
+const Testimonials = dynamic(() => import("@/components/Testimonials"), {
+  loading: () => null,
+  ssr: true,
+});
+const Contact = dynamic(() => import("@/components/Contact"), {
+  loading: () => null,
+  ssr: true,
+});
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
