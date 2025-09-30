@@ -264,12 +264,12 @@ const ResultsModal: React.FC<{
   return (
     <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 sm:backdrop-blur-sm md:backdrop-blur-md perf-hint gpu-hint">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>
-        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-slow gpu-hint"></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl sm:animate-float gpu-hint"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl sm:animate-float-delayed gpu-hint"></div>
+        <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl sm:animate-float-slow gpu-hint"></div>
       </div>
       
-      <div className="bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl sm:rounded-3xl shadow-lg sm:shadow-2xl max-w-5xl w-full mx-2 sm:mx-4 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm gpu-hint">
+      <div className="bg-gradient-to-br from-white via-lime-50/30 to-green-50/50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-2xl sm:rounded-3xl shadow-md sm:shadow-2xl max-w-5xl w-full mx-2 sm:mx-4 max-h-[95vh] sm:max-h-[90vh] overflow-y-auto border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm gpu-hint">
         <div className="relative p-4 sm:p-8 border-b border-white/20 dark:border-gray-700/50">
           <div className="flex items-center justify-between">
             <div className="flex items-center flex-1 min-w-0">
