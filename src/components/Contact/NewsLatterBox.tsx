@@ -139,10 +139,10 @@ const NewsLatterBox = () => {
   };
 
   return (
-    <div className="relative group perf-hint">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur-sm sm:blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
-      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 md:backdrop-blur-sm perf-hint">
-        <div className="text-center mb-8">
+    <div className="relative group perf-hint cv-auto">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl sm:blur opacity-10 sm:opacity-20 group-hover:opacity-10 sm:group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
+      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-md sm:shadow-2xl border border-white/20 dark:border-gray-700/50 md:backdrop-blur-sm perf-hint">
+        <div className="text-center mb-6 sm:mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white mb-4">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -164,7 +164,7 @@ const NewsLatterBox = () => {
             value={name}
             onChange={handleNameChange}
             placeholder="Enter your name"
-              className={`w-full rounded-xl border px-6 py-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 ${
+              className={`w-full rounded-xl border px-6 py-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-200 ${
                 errors.name 
                   ? 'border-red-500 bg-red-50 dark:bg-red-900/20 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
                   : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20'
@@ -186,7 +186,7 @@ const NewsLatterBox = () => {
             value={email}
             onChange={handleEmailChange}
             placeholder="Enter your email"
-              className={`w-full rounded-xl border px-6 py-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all duration-300 ${
+              className={`w-full rounded-xl border px-6 py-4 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-colors duration-200 ${
                 errors.email 
                   ? 'border-red-500 bg-red-50 dark:bg-red-900/20 focus:border-red-500 focus:ring-2 focus:ring-red-500/20' 
                   : 'border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-700 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20'
@@ -210,7 +210,7 @@ const NewsLatterBox = () => {
                 : 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 sm:hover:scale-105'
             }`}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur-sm sm:blur opacity-0 group-hover:opacity-10 sm:group-hover:opacity-20 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl sm:blur opacity-0 group-hover:opacity-10 sm:group-hover:opacity-20 transition-opacity duration-300"></div>
             <span className="relative flex items-center justify-center">
               {isSubmitting ? (
                 <>
