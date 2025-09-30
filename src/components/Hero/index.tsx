@@ -54,13 +54,13 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute top-20 right-10 z-0 animate-float">
+        <div className="absolute top-20 right-10 z-0 animate-float gpu-hint">
           <div className="h-20 w-20 rounded-full bg-gradient-to-r from-lime-400/20 to-green-400/20 blur-xl"></div>
         </div>
-        <div className="absolute top-40 left-10 z-0 animate-float-delayed">
+        <div className="absolute top-40 left-10 z-0 animate-float-delayed gpu-hint">
           <div className="h-16 w-16 rounded-full bg-gradient-to-r from-green-400/20 to-lime-400/20 blur-xl"></div>
         </div>
-        <div className="absolute bottom-20 right-20 z-0 animate-float-slow">
+        <div className="absolute bottom-20 right-20 z-0 animate-float-slow gpu-hint">
           <div className="h-24 w-24 rounded-full bg-gradient-to-r from-lime-300/20 to-green-300/20 blur-xl"></div>
         </div>
 

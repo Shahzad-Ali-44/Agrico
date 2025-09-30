@@ -18,6 +18,9 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
      
       <head>
+      <link rel="preload" as="image" href="/images/logo/logo.png" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
       <meta name="google-site-verification" content="-PmSdeVucs7soF4npXyELM-g8brS8RMd_XHYR1_oo0I" />
       </head>
 

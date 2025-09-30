@@ -139,9 +139,9 @@ const NewsLatterBox = () => {
   };
 
   return (
-    <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 backdrop-blur-sm">
+    <div className="relative group perf-hint">
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
+      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 backdrop-blur-sm perf-hint">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white mb-4">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -234,7 +234,7 @@ const NewsLatterBox = () => {
       </div>
 
       {popup.show && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4 perf-hint">
           <div className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 backdrop-blur-sm overflow-hidden animate-slide-in ${
             popup.type === 'success' 
               ? 'border-l-4 border-l-blue-500' 

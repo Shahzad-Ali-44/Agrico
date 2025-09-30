@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -46,6 +44,13 @@
     will-change: transform, opacity;
     transform: translateZ(0);
     backface-visibility: hidden;
+  }
+
+  .perf-hint {
+    will-change: transform, opacity, filter, backdrop-filter;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    isolation: isolate;
   }
 
   @keyframes float {
