@@ -1,11 +1,8 @@
 import ScrollUp from "@/components/Common/ScrollUp";
 import Hero from "@/components/Hero";
+import Features from "@/components/Features";
 import dynamic from "next/dynamic";
 
-const Features = dynamic(() => import("@/components/Features"), {
-  loading: () => null,
-  ssr: true,
-});
 const AboutSectionOne = dynamic(() => import("@/components/About/AboutSectionOne"), {
   loading: () => null,
   ssr: true,

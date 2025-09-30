@@ -1,10 +1,9 @@
-import SectionTitle from "../Common/SectionTitle";
 import RiceDiseaseDetection from "./RiceDiseaseDetection";
 
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 cv-auto">
+      <section id="features" className="py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
       
           <div className="text-center mb-16">

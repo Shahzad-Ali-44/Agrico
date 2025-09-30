@@ -101,7 +101,7 @@ const RiceDiseaseDetection: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-12 px-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-900 dark:text-gray-100 rounded-2xl shadow-xl dark:shadow-lg w-full max-w-3xl mx-auto border border-gray-200/50 dark:border-gray-700/50">
+    <div className="flex flex-col items-center py-12 px-8 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm text-gray-900 dark:text-gray-100 rounded-2xl shadow-xl dark:shadow-lg w-full max-w-3xl mx-auto border border-gray-200/50 dark:border-gray-700/50 gpu-hint">
       <div className="text-center mb-8">
         <div className="mb-4 inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-lime-500 to-green-500 text-white shadow-lg">
           <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
