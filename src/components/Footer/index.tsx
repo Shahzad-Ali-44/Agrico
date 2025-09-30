@@ -5,11 +5,11 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden">
+      <footer className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 overflow-hidden perf-hint">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
-          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>
+          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-slow gpu-hint"></div>
         </div>
 
         <div className="container mx-auto px-4 pt-16 md:pt-20 lg:pt-24 pb-8 relative z-10">
@@ -35,7 +35,7 @@ const Footer = () => {
               </h3>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -78,7 +78,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-to-br from-gray-800/50 to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
+                <div className="bg-gradient-to-br from-gray-800/40 to-gray-700/40 sm:from-gray-800/50 sm:to-gray-700/50 rounded-2xl p-6 border border-gray-600/30">
                   <h4 className="text-xl font-bold text-lime-400 mb-4 flex items-center">
                     <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

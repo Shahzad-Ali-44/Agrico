@@ -141,7 +141,7 @@ const NewsLatterBox = () => {
   return (
     <div className="relative group perf-hint">
       <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300 gpu-hint"></div>
-      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 backdrop-blur-sm perf-hint">
+      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm perf-hint">
         <div className="text-center mb-8">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white mb-4">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">

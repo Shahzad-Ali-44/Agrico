@@ -169,7 +169,7 @@ const Contact = () => {
           <div className="lg:col-span-7">
             <div className="relative group">
               <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-2xl border border-white/20 dark:border-gray-700/50 backdrop-blur-sm">
+              <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
                 <h3 className="mb-4 text-2xl font-bold text-gray-900 dark:text-white">
                   Send us a Message
                 </h3>
