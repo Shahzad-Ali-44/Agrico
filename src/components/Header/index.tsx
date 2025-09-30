@@ -101,7 +101,7 @@ const Header = () => {
                 onClick={navbarToggleHandler}
                 id="navbarToggler"
                 aria-label="Mobile Menu"
-                className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-xl px-3 py-2 ring-lime-600 focus:ring-2 lg:hidden bg-white/10 dark:bg-gray-800/50 backdrop-blur-sm hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 z-50"
+                className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-xl px-3 py-2 ring-lime-600 focus:ring-2 lg:hidden bg-white/10 dark:bg-gray-800/50 sm:backdrop-blur-sm hover:bg-white/20 dark:hover:bg-gray-700/50 transition-all duration-300 z-50"
               >
                 <span
                   className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
@@ -161,7 +161,7 @@ const Header = () => {
                             </span>
                           </p>
                           <div
-                            className={`submenu relative left-0 top-full rounded-xl bg-white/95 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 dark:bg-gray-900/95 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-xl lg:group-hover:visible lg:group-hover:top-full border border-gray-200/50 dark:border-gray-700/50 ${
+                            className={`submenu relative left-0 top-full rounded-xl bg-white/95 sm:backdrop-blur-md transition-all duration-300 group-hover:opacity-100 dark:bg-gray-900/95 lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-xl lg:group-hover:visible lg:group-hover:top-full border border-gray-200/50 dark:border-gray-700/50 ${
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >

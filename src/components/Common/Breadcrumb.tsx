@@ -31,7 +31,7 @@ const Breadcrumb = ({
             </div>
             <div className="lg:col-span-4 order-1 lg:order-2 w-full lg:w-auto">
               <div className="flex justify-start lg:justify-end mb-4 lg:mb-0">
-                <nav className="flex items-center space-x-1 sm:space-x-2 bg-white dark:bg-gray-800 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-lg border border-white/20 dark:border-gray-700/50 backdrop-blur-sm">
+                <nav className="flex items-center space-x-1 sm:space-x-2 bg-white dark:bg-gray-800 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-lg border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
                   <Link
                     href="/"
                     className="flex items-center text-sm text-gray-600 dark:text-gray-300 hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 group"
