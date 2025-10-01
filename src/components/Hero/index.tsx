@@ -7,28 +7,38 @@ const Hero = () => {
     if (!targetElement) return;
 
     const startPosition = window.pageYOffset;
-    const targetPosition = targetElement.offsetTop - 80; // Account for header
+    const targetPosition = targetElement.offsetTop - 80;
     const distance = targetPosition - startPosition;
-    const duration = 1000; // 1 second for smooth scroll
+    const duration = 800;
     let startTime: number | null = null;
+    let animationId: number | null = null;
 
     const animation = (currentTime: number) => {
       if (startTime === null) startTime = currentTime;
       const timeElapsed = currentTime - startTime;
       const progress = Math.min(timeElapsed / duration, 1);
       
-      // Easing function for smooth deceleration
       const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
       const ease = easeInOutCubic(progress);
       
       window.scrollTo(0, startPosition + distance * ease);
       
       if (progress < 1) {
-        requestAnimationFrame(animation);
+        animationId = requestAnimationFrame(animation);
+      } else {
+        animationId = null;
       }
     };
     
-    requestAnimationFrame(animation);
+    if (animationId) {
+      cancelAnimationFrame(animationId);
+    }
+    
+    try {
+      animationId = requestAnimationFrame(animation);
+    } catch (error) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
   return (
     <>
@@ -57,9 +67,19 @@ const Hero = () => {
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
                   <Link
                     href="#features"
-                    className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-lime-600 to-green-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-lime-500/25"
+                    className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-lime-600 to-green-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-lime-500/25 active:scale-95"
                     onClick={(e) => {
                       e.preventDefault();
+                      e.stopPropagation();
+                      smoothScrollTo('features');
+                    }}
+                    onTouchStart={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                    }}
+                    onTouchEnd={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
                       smoothScrollTo('features');
                     }}
                   >

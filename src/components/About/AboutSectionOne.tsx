@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -19,7 +18,6 @@ const AboutSectionOne = () => {
 
   return (
     <section id="about" className="relative py-16 md:py-20 lg:py-28 bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden cv-auto perf-hint">
-      {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float gpu-hint"></div>
         <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed gpu-hint"></div>
@@ -27,7 +25,6 @@ const AboutSectionOne = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        {/* Section Header */}
         <div className="text-center mb-16">
           <div className="mb-4 inline-flex items-center rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/30 dark:text-lime-300">
              Our Mission
@@ -44,7 +41,6 @@ const AboutSectionOne = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white">

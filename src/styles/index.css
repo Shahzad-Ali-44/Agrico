@@ -129,27 +129,21 @@
   }
 }
 
-/* Mobile light CSS overrides: keep same look, lighter effects on small screens */
 @media (max-width: 480px) {
-  /* Blur radii tuning for small screens (visually equivalent but cheaper) */
   .blur-xl { filter: blur(8px) !important; }
   .blur-2xl { filter: blur(12px) !important; }
   .blur-3xl { filter: blur(14px) !important; }
 
-  /* Backdrop blur tuning */
   .backdrop-blur-sm { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
   .backdrop-blur-md { backdrop-filter: none !important; -webkit-backdrop-filter: none !important; }
 
-  /* Shadow softening to reduce paint cost while matching appearance */
   .shadow-xl { box-shadow: 0 10px 18px rgba(0,0,0,0.12), 0 3px 6px rgba(0,0,0,0.08) !important; }
   .shadow-2xl { box-shadow: 0 16px 28px rgba(0,0,0,0.14), 0 6px 10px rgba(0,0,0,0.10) !important; }
 
-  /* Animated blobs render on compositor */
   .animate-float,
   .animate-float-delayed,
   .animate-float-slow { will-change: transform; transform: translateZ(0); }
 
-  /* Slow down animations slightly on very small screens to reduce CPU/GPU */
   .animate-float { animation-duration: 9s !important; }
   .animate-float-delayed { animation-duration: 11s !important; }
   .animate-float-slow { animation-duration: 13s !important; }
