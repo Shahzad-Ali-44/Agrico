@@ -31,6 +31,8 @@ const NewsLatterBox = () => {
     });
   };
 
+
+
   const hidePopup = () => {
     setPopup(prev => ({ ...prev, show: false }));
   };
@@ -141,8 +143,8 @@ const NewsLatterBox = () => {
   return (
     <div className="relative group">
       <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
-        <div className="text-center mb-8">
+      <div className="relative bg-white dark:bg-gray-800 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-lg sm:shadow-2xl border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
+        <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-lime-500 to-green-500 text-white mb-4">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -151,15 +153,22 @@ const NewsLatterBox = () => {
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Stay Updated
       </h3>
-          <p className="mb-8 text-gray-600 dark:text-gray-300">
+          <p className="mb-6 text-gray-600 dark:text-gray-300">
             Subscribe to receive the latest news, updates, and offers from AGRICO.
       </p>
         </div>
         
-        <form onSubmit={handleSubmit} className="space-y-4">
+        <form onSubmit={handleSubmit} className="space-y-6">
         <div>
+          <label
+            htmlFor="newsletter-name"
+            className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
+          >
+            Your Name *
+          </label>
           <input
             type="text"
+            id="newsletter-name"
             name="name"
             value={name}
             onChange={handleNameChange}
@@ -180,8 +189,15 @@ const NewsLatterBox = () => {
             )}
           </div>
           <div>
+          <label
+            htmlFor="newsletter-email"
+            className="mb-3 block text-sm font-semibold text-gray-700 dark:text-gray-300"
+          >
+            Your Email *
+          </label>
           <input
             type="email"
+            id="newsletter-email"
             name="email"
             value={email}
             onChange={handleEmailChange}
@@ -234,12 +250,21 @@ const NewsLatterBox = () => {
       </div>
 
       {popup.show && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4 perf-hint">
-          <div className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg sm:shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in ${
-            popup.type === 'success' 
-              ? 'border-l-4 border-l-blue-500' 
-              : 'border-l-4 border-l-red-500'
-          }`}>
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999] p-4 perf-hint rounded-3xl">
+          <div 
+            data-newsletter-popup 
+            className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-lg sm:shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              popup.type === 'success' 
+                ? 'border-l-4 border-l-blue-500' 
+                : 'border-l-4 border-l-red-500'
+            }`}
+            style={{ 
+              maxHeight: '90vh',
+              overflowY: 'auto',
+              marginTop: 'auto',
+              marginBottom: 'auto'
+            }}
+          >
             <div className={`absolute inset-0 opacity-10 ${
               popup.type === 'success' 
                 ? 'bg-gradient-to-r from-blue-500 to-cyan-500' 

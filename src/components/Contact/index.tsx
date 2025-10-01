@@ -31,6 +31,14 @@ const Contact = () => {
       title,
       message
     });
+    
+  
+    setTimeout(() => {
+      const popupElement = document.querySelector('[data-popup]');
+      if (popupElement) {
+        (popupElement as HTMLElement).focus();
+      }
+    }, 100);
   };
 
   const hidePopup = () => {
@@ -321,7 +329,7 @@ const Contact = () => {
 
       {popup.show && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4">
-        <div className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in ${
+        <div data-popup className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in focus:outline-none focus:ring-2 focus:ring-lime-500 ${
             popup.type === 'success' 
               ? 'border-l-4 border-l-lime-500' 
               : 'border-l-4 border-l-red-500'
