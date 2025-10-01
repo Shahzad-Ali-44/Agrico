@@ -52,8 +52,8 @@ const AboutSectionOne = () => {
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-lime-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-lime-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-lime-50 to-green-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-lime-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-lime-500 to-green-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}
@@ -64,8 +64,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-blue-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-blue-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}
@@ -76,8 +76,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-orange-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-orange-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}
@@ -88,8 +88,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-green-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-green-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}
@@ -100,8 +100,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-purple-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-purple-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}
@@ -112,8 +112,8 @@ const AboutSectionOne = () => {
                 </div>
 
                 <div className="group relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-teal-200/50 dark:border-gray-600/50 shadow-lg hover:shadow-xl transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
+                  <div className="relative p-3 sm:p-4 bg-gradient-to-br from-teal-50 to-cyan-50 dark:from-gray-800 dark:to-gray-700 rounded-xl border border-teal-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-r from-teal-500 to-cyan-500 flex items-center justify-center mr-3 flex-shrink-0">
                         {checkIcon}

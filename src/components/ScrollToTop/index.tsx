@@ -47,13 +47,13 @@ export default function ScrollToTop() {
         <div
           onClick={scrollToTop}
           aria-label="scroll to top"
-          className="group relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-lime-500 to-green-500 text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-xl hover:shadow-lime-500/25 dark:from-lime-600 dark:to-green-600"
+          className="group relative flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-gradient-to-r from-lime-500 to-green-500 text-white shadow-md sm:shadow-lg transition-all duration-300 ease-in-out hover:scale-105 sm:hover:scale-110 hover:shadow-lg sm:hover:shadow-xl hover:shadow-lime-500/15 sm:hover:shadow-lime-500/25 dark:from-lime-600 dark:to-green-600"
         >
           
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-400 to-green-400 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-30"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-400 to-green-400 opacity-0 blur-sm transition-opacity duration-300 group-hover:opacity-15 sm:group-hover:opacity-30"></div>
           
        
-          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-500 to-green-500 opacity-0 animate-ping group-hover:opacity-20"></div>
+          <div className="absolute inset-0 rounded-full bg-gradient-to-r from-lime-500 to-green-500 opacity-0 animate-ping group-hover:opacity-10 sm:group-hover:opacity-20"></div>
           
         
           <div className="relative z-10">

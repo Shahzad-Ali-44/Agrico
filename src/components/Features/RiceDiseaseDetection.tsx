@@ -380,7 +380,7 @@ const ResultsModal: React.FC<{
                 
                 <div className="group relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
-                  <div className="relative p-4 sm:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-green-200/50 dark:border-gray-600/50 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300">
+                  <div className="relative p-3 sm:p-6 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-gray-800 dark:to-gray-700 rounded-xl sm:rounded-2xl border border-green-200/50 dark:border-gray-600/50 shadow-sm sm:shadow-lg hover:shadow-md sm:hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center mb-2 sm:mb-3">
                       <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mr-2 sm:mr-3 flex-shrink-0">
                         <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -403,9 +403,9 @@ const ResultsModal: React.FC<{
             </div>
             <button
               onClick={onClose}
-              className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-lime-600 to-green-600 text-white rounded-xl sm:rounded-2xl font-bold text-base sm:text-lg hover:from-lime-700 hover:to-green-700 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+              className="group relative w-full sm:w-auto px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-r from-lime-600 to-green-600 text-white rounded-xl sm:rounded-2xl font-bold text-sm sm:text-lg hover:from-lime-700 hover:to-green-700 transition-all duration-300 hover:scale-105 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-0 group-hover:opacity-10 sm:group-hover:opacity-20 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-xl sm:rounded-2xl blur-sm sm:blur opacity-0 group-hover:opacity-5 sm:group-hover:opacity-20 transition-opacity duration-300"></div>
               <span className="relative flex items-center justify-center">
                 <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

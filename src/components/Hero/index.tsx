@@ -1,6 +1,35 @@
+"use client";
 import Link from "next/link";
 
 const Hero = () => {
+  const smoothScrollTo = (targetId: string) => {
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+
+    const startPosition = window.pageYOffset;
+    const targetPosition = targetElement.offsetTop - 80; // Account for header
+    const distance = targetPosition - startPosition;
+    const duration = 1000; // 1 second for smooth scroll
+    let startTime: number | null = null;
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const progress = Math.min(timeElapsed / duration, 1);
+      
+      // Easing function for smooth deceleration
+      const easeInOutCubic = (t: number) => t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+      const ease = easeInOutCubic(progress);
+      
+      window.scrollTo(0, startPosition + distance * ease);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animation);
+      }
+    };
+    
+    requestAnimationFrame(animation);
+  };
   return (
     <>
       <section
@@ -29,6 +58,10 @@ const Hero = () => {
                   <Link
                     href="#features"
                     className="group relative overflow-hidden rounded-xl bg-gradient-to-r from-lime-600 to-green-600 px-8 py-4 text-lg font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-lime-500/25"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      smoothScrollTo('features');
+                    }}
                   >
                     <span className="relative z-10 flex items-center">
                        Try Now

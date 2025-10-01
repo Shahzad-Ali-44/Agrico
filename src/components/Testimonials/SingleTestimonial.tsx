@@ -21,9 +21,9 @@ const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   return (
     <div className="w-full group h-full">
       <div className="relative h-full flex flex-col">
-        <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-2xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-lime-500 to-green-500 rounded-2xl blur opacity-10 sm:opacity-20 group-hover:opacity-20 sm:group-hover:opacity-30 transition-opacity duration-300"></div>
         
-        <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm flex flex-col h-full">
+        <div className="relative bg-white dark:bg-gray-800 rounded-2xl p-4 sm:p-6 shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm flex flex-col h-full">
           <div className="mb-4 flex items-center space-x-1">
             {ratingIcons}
           </div>

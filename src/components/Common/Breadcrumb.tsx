@@ -12,9 +12,9 @@ const Breadcrumb = ({
       <section className="relative overflow-hidden pt-28 lg:pt-[150px] bg-gradient-to-br from-gray-50 via-white to-lime-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-3xl animate-float-delayed"></div>
-          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-3xl animate-float-slow"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-lime-500/10 rounded-full blur-2xl sm:blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-green-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-delayed"></div>
+          <div className="absolute top-1/2 right-1/3 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl sm:blur-3xl animate-float-slow"></div>
         </div>
 
         <div className="container mx-auto px-4 relative z-10">
@@ -31,7 +31,7 @@ const Breadcrumb = ({
             </div>
             <div className="lg:col-span-4 order-1 lg:order-2 w-full lg:w-auto">
               <div className="flex justify-start lg:justify-end mb-4 lg:mb-0">
-                <nav className="flex items-center space-x-1 sm:space-x-2 bg-white dark:bg-gray-800 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-lg border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
+                <nav className="flex items-center space-x-1 sm:space-x-2 bg-white dark:bg-gray-800 rounded-xl px-3 py-2 sm:px-4 sm:py-3 shadow-md sm:shadow-lg border border-white/20 dark:border-gray-700/50 sm:backdrop-blur-sm">
                   <Link
                     href="/"
                     className="flex items-center text-sm text-gray-600 dark:text-gray-300 hover:text-lime-600 dark:hover:text-lime-400 transition-colors duration-300 group"
