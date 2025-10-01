@@ -31,14 +31,6 @@ const Contact = () => {
       title,
       message
     });
-    
-  
-    setTimeout(() => {
-      const popupElement = document.querySelector('[data-popup]');
-      if (popupElement) {
-        (popupElement as HTMLElement).focus();
-      }
-    }, 100);
   };
 
   const hidePopup = () => {
@@ -319,6 +311,68 @@ const Contact = () => {
                 </div>
               </form>
             </div>
+            {popup.show && (
+              <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999] p-4 rounded-3xl">
+                <div 
+                  data-popup 
+                  className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in ${
+                    popup.type === 'success' 
+                      ? 'border-l-4 border-l-lime-500' 
+                      : 'border-l-4 border-l-red-500'
+                  }`}
+                  style={{ 
+                    maxHeight: '90vh',
+                    overflowY: 'auto',
+                    marginTop: 'auto',
+                    marginBottom: 'auto'
+                  }}
+                >
+                  <div className={`absolute inset-0 opacity-10 ${
+                    popup.type === 'success' 
+                      ? 'bg-gradient-to-r from-lime-500 to-green-500' 
+                      : 'bg-gradient-to-r from-red-500 to-pink-500'
+                  }`}></div>
+                  
+                  <div className="relative p-8">
+                    <div className="flex items-start">
+                      <div className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center mr-6 ${
+                        popup.type === 'success' 
+                          ? 'bg-gradient-to-r from-lime-500 to-green-500' 
+                          : 'bg-gradient-to-r from-red-500 to-pink-500'
+                      }`}>
+                        {popup.type === 'success' ? (
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        ) : (
+                          <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                          {popup.title}
+                        </h4>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                          {popup.message}
+                        </p>
+                        <button
+                          onClick={hidePopup}
+                          className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                            popup.type === 'success'
+                              ? 'bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-600 hover:to-green-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
+                              : 'bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
+                          }`}
+                        >
+                          OK
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
           </div>
           <div className="lg:col-span-5">
@@ -326,60 +380,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-
-      {popup.show && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-[999999] p-4">
-        <div data-popup className={`relative max-w-md w-full bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 sm:backdrop-blur-sm overflow-hidden animate-slide-in focus:outline-none focus:ring-2 focus:ring-lime-500 ${
-            popup.type === 'success' 
-              ? 'border-l-4 border-l-lime-500' 
-              : 'border-l-4 border-l-red-500'
-          }`}>
-            <div className={`absolute inset-0 opacity-10 ${
-              popup.type === 'success' 
-                ? 'bg-gradient-to-r from-lime-500 to-green-500' 
-                : 'bg-gradient-to-r from-red-500 to-pink-500'
-            }`}></div>
-            
-            <div className="relative p-8">
-              <div className="flex items-start">
-                <div className={`flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center mr-6 ${
-                  popup.type === 'success' 
-                    ? 'bg-gradient-to-r from-lime-500 to-green-500' 
-                    : 'bg-gradient-to-r from-red-500 to-pink-500'
-                }`}>
-                  {popup.type === 'success' ? (
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  ) : (
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {popup.title}
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                    {popup.message}
-                  </p>
-                  <button
-                    onClick={hidePopup}
-                    className={`w-full py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
-                      popup.type === 'success'
-                        ? 'bg-gradient-to-r from-lime-500 to-green-500 hover:from-lime-600 hover:to-green-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
-                        : 'bg-gradient-to-r from-red-500 to-pink-500 hover:from-red-600 hover:to-pink-600 text-white shadow-lg hover:shadow-xl hover:scale-105'
-                    }`}
-                  >
-                    OK
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
+      
     </section>
   );
 };
