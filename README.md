@@ -46,7 +46,7 @@ The contact form uses SMTP to send emails directly. Configure your email setting
      SMTP_PASS=your-app-password
      SMTP_FROM=your-email@gmail.com
      SMTP_TO=recipient@example.com
-     NEXT_PUBLIC_API_URL=https://ShahzadAli44-Agrico-backend.hf.space/predict
+     NEXT_PUBLIC_API_URL=your-backend-api-url.com
      ```
 
 2. **How It Works**:
